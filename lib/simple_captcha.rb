@@ -4,6 +4,7 @@ module SimpleCaptcha
   autoload :ImageHelpers,      'simple_captcha/image'  
   autoload :ViewHelper,        'simple_captcha/view'
   autoload :ControllerHelpers, 'simple_captcha/controller'
+  autoload :FormBuilder,       'simple_captcha/form_builder'
   
   autoload :ModelHelpers,      'simple_captcha/active_record'
   autoload :CustomFormBuilder, 'simple_captcha/formtastic'
