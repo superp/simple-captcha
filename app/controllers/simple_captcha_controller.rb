@@ -5,8 +5,9 @@ class SimpleCaptchaController < ActionController::Metal
   # GET /simple_captcha
   def show
     unless params[:id].blank?
-      send_file(
-        generate_simple_captcha_image(params[:id]),
+      image = File.read generate_simple_captcha_image(params[:id])
+      send_data(
+        image,
         :type => 'image/jpeg',
         :disposition => 'inline',
         :filename => 'simple_captcha.jpg')
